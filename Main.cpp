@@ -1,7 +1,8 @@
 
 #include <iostream>
 #include <string>
-
+    class EnumConverter {
+    public:
 enum class MyEnum {
     Fiat,
     Mercedes,
@@ -18,9 +19,6 @@ enum class MyEnum {
     RollsRoyce,
     Lamborghini,
     };
-
-    class EnumConverter {
-    public:
        static std::string ConvertToString(MyEnum enumValue) {
             switch (enumValue) {
             case MyEnum::Lamborghini:
@@ -54,7 +52,7 @@ enum class MyEnum {
     };
 
     int main() {
-        MyEnum enumValue = MyEnum::Mercedes;
+        MyEnum enumValue = EnumConverter::MyEnum::Mercedes;
         EnumConverter converter;
 
         std::string stringValue = converter.ConvertToString(enumValue);
